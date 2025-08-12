@@ -35,6 +35,7 @@ class DetailsPageState extends State<DetailsPage> {
             final Map<String, dynamic> data = snapshot.data!.data;
 
             final String name = data['name'] ?? 'Unknown';
+            final String gender = data['gender'] ?? 'Unknown';
             final String imageUrl = data['image'] ?? '';
             final String lastKnownLocation =
                 data['location']['name'] ?? 'Unknown';
@@ -51,6 +52,7 @@ class DetailsPageState extends State<DetailsPage> {
                     DetailsCard(
                       imageUrl: imageUrl,
                       name: name,
+                      gender: gender,
                       lastKnowLocation: lastKnownLocation,
                       firstSeenIn: firstSeenIn,
                       status: status,

@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 class DetailsCard extends StatelessWidget {
   final String imageUrl;
   final String name;
+  final String gender;
   final String lastKnowLocation;
   final String firstSeenIn;
   final String status;
@@ -14,6 +15,7 @@ class DetailsCard extends StatelessWidget {
     Key? key,
     required this.imageUrl,
     required this.name,
+    required this.gender,
     required this.lastKnowLocation,
     required this.firstSeenIn,
     required this.status,
@@ -117,6 +119,27 @@ class DetailsCard extends StatelessWidget {
                 SizedBox(height: 4),
                 Text(
                   firstSeenIn,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.white,
+                    height: 1,
+                  ),
+                ),
+                SizedBox(height: 16),
+                Text(
+                  'Gender:',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.normal,
+                    color: AppColors.white,
+                    height: 1,
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+                SizedBox(height: 4),
+                Text(
+                  gender,
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
